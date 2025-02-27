@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVVMWithCombine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pog-Fd-A5I">
+                                <rect key="frame" x="333" y="59" width="60" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mX-Ch-klD">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="56"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                                    </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gvL-Cp-O25">
+                                        <rect key="frame" x="20" y="18" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="7MO-2u-cgK"/>
+                                    <constraint firstItem="gvL-Cp-O25" firstAttribute="centerY" secondItem="Pog-Fd-A5I" secondAttribute="centerY" id="Bho-b1-C0A"/>
+                                    <constraint firstAttribute="trailing" secondItem="0mX-Ch-klD" secondAttribute="trailing" id="Dij-nO-r3D"/>
+                                    <constraint firstItem="0mX-Ch-klD" firstAttribute="leading" secondItem="Pog-Fd-A5I" secondAttribute="leading" id="Gtk-We-uyD"/>
+                                    <constraint firstAttribute="bottom" secondItem="0mX-Ch-klD" secondAttribute="bottom" id="Ij6-9F-IMR"/>
+                                    <constraint firstAttribute="width" constant="60" id="LxZ-1J-Wjz"/>
+                                    <constraint firstItem="gvL-Cp-O25" firstAttribute="centerX" secondItem="Pog-Fd-A5I" secondAttribute="centerX" id="Nc1-GZ-aPA"/>
+                                    <constraint firstItem="0mX-Ch-klD" firstAttribute="top" secondItem="Pog-Fd-A5I" secondAttribute="top" id="ViA-79-fHY"/>
+                                </constraints>
+                            </view>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="R7d-3f-gDN">
+                                <rect key="frame" x="0.0" y="59" width="333" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="GWB-j1-AlK"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2Ip-6b-1fU"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RQS-fl-m98">
+                                <rect key="frame" x="0.0" y="115" width="393" height="737"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RQS-fl-m98" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Cee-oS-Nmq"/>
+                            <constraint firstAttribute="bottom" secondItem="RQS-fl-m98" secondAttribute="bottom" id="KSH-Yc-T4E"/>
+                            <constraint firstItem="Pog-Fd-A5I" firstAttribute="leading" secondItem="R7d-3f-gDN" secondAttribute="trailing" id="KZi-Bg-iUb"/>
+                            <constraint firstItem="Pog-Fd-A5I" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OIN-uF-5ef"/>
+                            <constraint firstItem="Pog-Fd-A5I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TdM-XT-yPW"/>
+                            <constraint firstItem="R7d-3f-gDN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WwM-bI-1sg"/>
+                            <constraint firstItem="RQS-fl-m98" firstAttribute="top" secondItem="R7d-3f-gDN" secondAttribute="bottom" id="XyF-Ja-vbG"/>
+                            <constraint firstItem="RQS-fl-m98" firstAttribute="top" secondItem="Pog-Fd-A5I" secondAttribute="bottom" id="ZR0-PT-0UU"/>
+                            <constraint firstItem="RQS-fl-m98" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mSX-qe-5aT"/>
+                            <constraint firstItem="R7d-3f-gDN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zUn-dE-tEX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="gvL-Cp-O25" id="oSc-A8-S2i"/>
+                        <outlet property="searchBar" destination="R7d-3f-gDN" id="NOp-Ps-kzL"/>
+                        <outlet property="searchButton" destination="0mX-Ch-klD" id="XkQ-Dq-F2B"/>
+                        <outlet property="tableView" destination="RQS-fl-m98" id="nnU-pa-YNB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
