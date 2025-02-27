@@ -6,7 +6,7 @@
 
 |Image|
 |--------|
-|![image](https://github.com/kk-vv/mvvm/blob/main/screenshot/home.png)|
+|<image widht="320" src="https://github.com/kk-vv/mvvm/blob/main/screenshot/home.png">|
 
 #### ViewModel
 
